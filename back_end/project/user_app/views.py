@@ -334,6 +334,15 @@ def scholar_view(request):
     if data:
         send_data['aadhar'] = data
 
+    filled_forms = models.ScolarShipFormModel.objects.filter(user=my_user).first()
+
+    if filled_forms:
+        send_data['status'] = int(filled_forms.status)
+
+        print(send_data['status'])
+
+        
+
     
     req_data = Oppertunities_model.objects.all()
     
@@ -480,9 +489,12 @@ def dashboard_view(request):
         return Http404()
 
     #if not student
-    
+    if not(my_user.is_student) and not(my_user.is_institute):
+        return redirect('/admin')
+
+
     if not(my_user.is_student):
-        return HttpResponse("institute user")
+        return redirect('api_dashboard')
     
     my_form = forms.UploadFormDoc()
     

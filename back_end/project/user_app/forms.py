@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from main_app import models
-from user_app.models import UploadForm,document_choice
+from user_app.models import UploadForm, document_choice, ScolarShipFormModel
 
 
 """
@@ -39,7 +39,7 @@ class UploadFormDoc(forms.ModelForm):
 
 
 
-class ScolarShipForm(forms.Form):
+class ScolarShipForm(forms.ModelForm):
     highersecondarypercentage = forms.IntegerField(
         widget=forms.NumberInput(attrs={
             'class': 'rectangle-55-gPw'
@@ -97,7 +97,6 @@ class ScolarShipForm(forms.Form):
         })
     )
     Gender = forms.ChoiceField(
-        choices=models.gender_choices,
         widget=forms.Select(attrs={
             'class': 'rectangle-56-1iu '
         })
@@ -172,7 +171,13 @@ class ScolarShipForm(forms.Form):
         widget=forms.FileInput(attrs={
             'class': 'rectangle-61-Nyj'
         })
-    )      
+    )    
+
+    class Meta:
+        model = ScolarShipFormModel
+        exclude = ('status', )
+        
+
 
 
 

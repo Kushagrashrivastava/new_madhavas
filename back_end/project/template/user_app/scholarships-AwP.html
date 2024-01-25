@@ -24,7 +24,14 @@
       <div class="auto-group-nppy-Yv1">
         <p class="sc-st-scholarship-fUq">SC/ST Scholarship</p>
         <div class="eligiblity-status-yVX">
+
+          {% if status >= 1 %}
+
           <img class="circle-slice-1-Duf" src="{% static '/assets/circle-slice-1.png' %}"/>
+          
+          {% endif %}
+
+          {% if status >= 2 %}
           <div class="ellipse-1-8mj">
           </div>
           <div class="ellipse-1-8mj">
@@ -48,8 +55,15 @@
           <div class="ellipse-1-8mj">
           </div>
           
+          
+          
           <img class="circle-slice-2-PND" src="{% static '/assets/circle-slice-2.png' %}"/>
+          {% endif %}
+          
+          
+          {% if status >= 3 %}
           <div class="ellipse-12-hNu">
+
           </div>
           <div class="ellipse-12-hNu">
           </div>
@@ -77,6 +91,11 @@
 
           
           <img class="circle-slice-4-149" src="{% static '/assets/circle-slice-4.png' %}"/>
+          
+          {% endif %}
+
+          {% if status >= 4 %}
+
           <div class="ellipse-23-B73">
           </div>
           <div class="ellipse-23-B73">
@@ -99,6 +118,11 @@
           </div>
           
           <img class="circle-slice-6-XMF" src="{% static '/assets/circle-slice-6.png' %}"/>
+         
+          {% endif %}
+
+          {% if status >= 5 %}
+          
           <div class="ellipse-34-F2M">
           </div>
           <div class="ellipse-34-F2M">
@@ -122,13 +146,46 @@
           <div class="ellipse-34-F2M">
           </div>          
           <img class="circle-slice-8-uHF" src="{% static '/assets/circle-slice-8.png' %}"/>
+          {% endif %}
+
         </div>
+
         <div class="frame-18-2Ms">
+
+          
+          {% if status >= 1 %}
+
+
           <p class="form-fill-XJd">Form fill</p>
+
+          {% endif %}
+
+          {% if status >= 2 %}
+
+          
           <p class="institution-verification-G1K">Institution Verification</p>
+
+          {% endif %}
+
+          {% if status >= 3 %}
+
+          
           <p class="government-verification-anh">Government Verification</p>
+
+          {% endif %}
+
+          {% if status >= 4 %}
+
+          
           <p class="money-scentioned-L1B">Money Scentioned</p>
+
+          {% endif %}
+
+          {% if status >= 5 %}
+
           <p class="money-deposited-HBK">Money Deposited</p>
+          
+          {% endif %}
         </div>
       </div>
     </div>
