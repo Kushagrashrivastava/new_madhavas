@@ -1,0 +1,553 @@
+
+html {
+	font-size:59.5%;
+  width: 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 100%;
+}
+.internships-jobs-4sf {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #efefef;
+}
+.body-pM3 {
+  margin-left: 5rem;
+  position: absolute;
+  left: 27rem;
+  top: 10rem;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.internships-jobs--J1K {
+  margin-right: 30rem;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #000000;
+  font-family: JejuGothic, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.document-form-oTs {
+  margin-bottom: 2.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.auto-group-lpju-xLm {
+  margin: 0rem 1.2rem 2.35rem 0rem;
+  width: calc(100% - 1.2rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.organization-name--rww {
+  width: 20%;
+  margin: 0.1rem 9.5rem 0rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rectangle-72-Mdo {
+  width: 60%;
+  height: 3rem;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.auto-group-khkb-JZ3 {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.duration--EBo {
+  margin: 0rem 24rem 0.25rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.to--Xgh {
+  margin: 0rem 1.9rem 0.25rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.auto-group-y15p-GPP {
+  margin: 0rem 2rem 0.2rem 0rem;
+  box-sizing: border-box;
+  padding: 1.05rem 2.8rem 0.25rem 2.7rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #989898;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #fffefe;
+  flex-shrink: 0;
+}
+.from--8Rb {
+  margin: 0rem 1.9rem 0.45rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.auto-group-yzch-fgR {
+  box-sizing: border-box;
+  padding: 1.05rem 3rem 0.25rem 2.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #989898;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #fffefe;
+  flex-shrink: 0;
+}
+.auto-group-cegm-VfT {
+  box-sizing: border-box;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.auto-group-puzz-Sah {
+  margin: 0rem 1.2rem 4rem 0rem;
+  width: calc(100% - 1.2rem);
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.skills-required--BYH {
+  margin: 0rem 15rem 0.1rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rectangle-75-hWd {
+  width: 60rem;
+  height: 3rem;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.auto-group-bcqs-3qP {
+  margin: 0rem 1.2rem 3.6rem 0.1rem;
+  width: calc(100% - 1.3rem);
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.no-of-openings--BRo {
+  margin-right: 13.1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rectangle-81-XEm {
+  margin-bottom: 0.4rem;
+  width: 60rem;
+  height: 3rem;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.auto-group-nkhb-GTF {
+  margin: 0rem 0rem 7.7rem 0.9rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.max-pay--1fj {
+  margin: 0.2rem 4.4rem 0rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rectangle-78-WMb {
+  margin: 0rem 7.8rem 0.1rem 0rem;
+  width: 15rem;
+  height: 3rem;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.min-pay--Dmo {
+  margin: 0rem 4.1rem 0.6rem 0rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rectangle-80-wC1 {
+  margin-top: 0.1rem;
+  width: 15rem;
+  height: 3rem;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.shortdiscription-dKj {
+  margin-left: 0.1rem;
+  width: 80rem;
+  height: 15rem;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #989898;
+  font-family: Josefin Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.submit-button-Jgm {
+  margin-top: -10rem;
+  margin-right: 1rem;
+  position: relative;
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
+.rectangle-66-3uF {
+  width: 15rem;
+  height: 6rem;
+  position: absolute;
+  background-color: #4f33fa;
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: Open Sans, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.submit-o7j {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: Open Sans, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.menu-FJD {
+  box-sizing: border-box;
+  padding: 2rem;
+  padding-top: 4rem;
+  width: 27rem;
+  height: 93vh;
+  position: absolute;
+  top: 6rem;
+  border: solid 0 rgba(0, 0, 0, 0.0900000036);
+  box-shadow: 0.1rem -0.1rem 0.78rem rgba(0, 0, 0, 0.349999994);
+  background-color: rgba(255, 255, 255, 0.6600000262);
+}
+.auto-group-in4m-Wzq {
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+  width: 100%;
+  row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.group-7-Tv5 {
+  width: 23rem;
+  height: 4rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.group-7-Tv5:hover{
+  background-color: rgba(23, 173, 50, 0.4600000083);
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+/* .group-7-Tv5 .rectangle-21-2CV {
+  width: 20rem;
+  height: 4rem;
+  position: absolute;
+  background-color: rgba(23, 173, 50, 0.4600000083);
+  border-radius: 1.1rem;
+} */
+.get-api-X9F {
+  width: 5rem;
+  margin-left: 4rem;
+  margin-top: 0.5rem;
+  position: absolute;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6025;
+  color: #000000;
+  font-family: Jomolhari, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.bookmark-CWH {
+  width: 3rem;
+  margin: 0.6rem;
+  position: absolute;
+  object-fit: contain;
+  /* vertical-align: top; */
+}
+.group-8-hT3 {
+  width: 29.5696rem;
+  height: 5.8rem;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-8-hT3 .rectangle-21-d5o {
+  width: 29.5696rem;
+  height: 5.4rem;
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  background-color: #fafafa;
+  border-radius: 2.2rem;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-8-hT3 .hackathons-N3P {
+  width: 19rem;
+  height: 5.8rem;
+  position: absolute;
+  left: 5.4664rem;
+  top: 0;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.6025;
+  color: #000000;
+  font-family: Jomolhari, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-8-hT3 .book-reading-Fcy {
+  width: 4.1rem;
+  height: 4rem;
+  position: absolute;
+  left: 0.9696rem;
+  top: 0.9rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-9-AV3 {
+  width: 29.8rem;
+  height: 5.8rem;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-9-AV3 .rectangle-20-vDK {
+  width: 29.5696rem;
+  height: 5.4rem;
+  position: absolute;
+  left: 0.2304rem;
+  top: 0.4rem;
+  background-color: #fafafa;
+  border-radius: 2.2rem;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-9-AV3 .scholarships-Rvm {
+  width: 20.6rem;
+  height: 5.8rem;
+  position: absolute;
+  left: 5.6609rem;
+  top: 0;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.6025;
+  color: #000000;
+  font-family: Jomolhari, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.frame-2-ZZo .auto-group-in4m-Wzq .group-9-AV3 .ebook-ZGH {
+  width: 6.3rem;
+  height: 4.3rem;
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.frame-2-ZZo .group-14-u5F {
+  margin-bottom: 4.4rem;
+  width: 100%;
+  height: 5.8rem;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.frame-2-ZZo .group-14-u5F .rectangle-20-EtD {
+  width: 29.5696rem;
+  height: 5.4rem;
+  position: absolute;
+  left: 0.3304rem;
+  top: 0.2rem;
+  background-color: #fafafa;
+  border-radius: 2.2rem;
+}
+.frame-2-ZZo .group-14-u5F .intern-jobs-BHf {
+  width: 17.9rem;
+  height: 5.8rem;
+  position: absolute;
+  left: 3rem;
+  top: 0;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.6025;
+  color: #000000;
+  font-family: Jomolhari, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.frame-2-ZZo .group-14-u5F .internship-JdB {
+  width: 3.1rem;
+  height: 2.8rem;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../assets/internship-bg-QCM.png');
+}
+.frame-2-ZZo .group-14-u5F .internship-noF {
+  width: 6.1rem;
+  height: 4.8rem;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../assets/internship-bg-3ZF.png');
+}
+.frame-2-ZZo .group-11-Hzu {
+  width: 29.5696rem;
+  height: 5.8rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.frame-2-ZZo .group-11-Hzu .rectangle-22-EQM {
+  width: 29.5696rem;
+  height: 5.4rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  background-color: #fafafa;
+  border-radius: 2.2rem;
+}
+.frame-2-ZZo .group-11-Hzu .faqs-Yfw {
+  width: 10.4rem;
+  height: 5.8rem;
+  position: absolute;
+  left: 7.0696rem;
+  top: 0;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.6025;
+  color: #000000;
+  font-family: Jomolhari, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.frame-2-ZZo .group-11-Hzu .progress-question-4PP {
+  width: 3.2419rem;
+  height: 3.3167rem;
+  position: absolute;
+  left: 1.1027rem;
+  top: 1.2416rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.rectangle-2-fty {
+  width: 100vw;
+  height: 6rem;
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25), 0 0.8rem 0.4rem rgba(0, 0, 0, 0.4399999976);
+  background-color: #ffffff;
+}
+.bcd3b4b5d471dae27a60bd4b5f07-1-x7P {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.account-circle-5ho {
+  width: 3.7rem;
+  position: absolute;
+  left: 134.3917rem;
+  top: 1.7rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.madhvas {
+  width: 8rem;
+  height: 6rem;
+  position: relative;
+  left: 6rem;
+  top: 0;
+  background-size: 257.143% 284.211%;
+  background-position: -6rem -5rem;
+  background-image: url('../assets/yourparagraphtext1-removebg-preview-1-W2y.png');
+}
+.ezapi {
+  width: 7.7rem;
+  height: 4.5rem;
+  position: absolute;
+  left: 14rem;
+  top: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #15ab30;
+  font-family: jsMath-cmbx10, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.bell {
+  width: 3rem;
+  position: absolute;
+  left: 126.3rem;
+  top: 1.8rem;
+  /* object-fit: contain; */
+  /* vertical-align: top; */
+}

@@ -1,0 +1,7 @@
+env/
+.env
+db.sqlite3
+static/
+__pycache__/
+api_data
+migrations/
