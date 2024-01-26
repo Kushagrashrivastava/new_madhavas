@@ -22,88 +22,34 @@ from random import randint
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-
-
-
 links = {
     'scholar': 'https://cdn.s3waas.gov.in/s31385974ed5904a438616ff7bdb3f7439/uploads/2019/06/2019062152.jpg'
 }
 
 @login_required
 @require_http_methods(["GET", "POST"])
-def scholarShip(request, number, auto=False):
+def scholarShip(request):
 
     my_user = request.user
 
-    user_data = CustomUser.objects.filter(username = my_user.username).first() 
-
+    user_data = CustomUser.objects.filter(username = my_user.username).first()
 
     my_form = forms.ScolarShipForm()
 
+    if request.method == 'POST':
+        my_form = forms.ScolarShipForm(request.POST, request.FILES)
 
-    if number == 1:
-
-        if auto:
-
-            data = {
-                'name': user_data.Name,
-                'dateOfBirth': user_data.dob,
-                'Fathername': '',
-                'Gender': user_data.gender,
-                'Address': '',
-                'PinCode': '',
-                'MobileNUmber': user_data.phone_number,
-                'EmailAddress': user_data.email,
-                'MaritalStatus': ''
-
-            }
-
-            my_form = forms.ScolarShipForm(initial=data)
-            
+        if my_form.is_valid():
+            my_form = my_form.save(commit=False)
+            my_form.user = user_data
+            my_form.save()
+            return redirect('dashboard')
     
-        return render(request, "Scholarship/scholarshipform4.html", {'form': my_form})
+
+    return render(request, "Scholarship/scholarshipform4.html", {'form': my_form})
 
 
-    elif number == 2:
-
-        if auto:
-            data = {}
-            up_data = models.UploadForm.objects.filter(user=my_user)
-
-            caste = up_data.filter(document_type='Caste').first()
-
-
-            if caste:
-
-                print("ohk", caste.document_number)
-
-                data = {
-                    'CasteCertificate': caste.document_number,
-                    'CasteCertificateUpload': {'url': caste.document.url}
-                }
-
-            my_form = forms.ScolarShipForm(request.POST, initial=data)
-
-
-            if request.method == 'POST':
-                my_form = forms.ScolarShipForm(request.POST, request.FILES)
-
-                print(my_form)
-        
-        return render(request, "Scholarship/scholarshipform.html", {'form': my_form})
     
-    elif number == 3:
-        
-        return render(request, "Scholarship/scholarship-form2.html", {'form': my_form})
-    
-    elif number == 4:
-        
-        return render(request, "Scholarship/scholarship-form3.html", {'form': my_form})
-
-    else:
-        
-        return Http404()
-
 
 
 """
@@ -334,15 +280,14 @@ def scholar_view(request):
     if data:
         send_data['aadhar'] = data
 
-    filled_forms = models.ScolarShipFormModel.objects.filter(user=my_user).first()
+    filled_forms = models.ScolarShipFormModel.objects.filter(user=my_user).order_by('-create_on')
+
+    print(filled_forms)
+    
+    filled_forms = filled_forms.first()
 
     if filled_forms:
         send_data['status'] = int(filled_forms.status)
-
-        print(send_data['status'])
-
-        
-
     
     req_data = Oppertunities_model.objects.all()
     

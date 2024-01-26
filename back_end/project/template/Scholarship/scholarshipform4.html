@@ -6,7 +6,7 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <title>ScholarShipForm4</title>
+  <title>Scholarship Form</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kadwa%3A400"/>
@@ -24,7 +24,7 @@
       <p class="basic-details-of-applicant-HyP">Basic Details of Applicant</p>
       <p class="required-fields-7xR">* Required Fields</p>
     </div>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="{% url 'scolarShip' %}" method="post" enctype="multipart/form-data">
 
 
       {% csrf_token %}
@@ -109,9 +109,229 @@
           <!-- <input class="rectangle-61-x9b" type="text"/> -->
         </div>
       </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Caste Certificate No</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.CasteCertificate}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Domacile Certificate No</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.DomicileCertificate}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Voter ID No.</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.VOterID}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">PAN Card No.</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.PanCard}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">SSMID No.</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.SSmID}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Income Certificate No.</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.IncomeCertificate}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">
+              Higher Secondary Percentage</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.highersecondarypercentage}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Secondary Class Percentage</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.secondaryclasspercentage}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Transfer Certificate</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.transfercertificate}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+
+      
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Gap
+              Certificate</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.gapcertificate}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Last Year Marksheet</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.lastyearmarksheet}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <!-- New form -->
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Account Name</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.accountholdername}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">Account Number</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.accountnumber}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">
+              IFSC Code</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.isfcnumber}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">
+              
+Cast Certificate</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.CasteCertificateUpload}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">
+              Domacile Certificate</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.DomicileCertificateUpload}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
+
+      <div class="income-certificate-nDB">
+        <div class="group-20-wLy">
+          <p class="marital-status-VtH">
+            <span class="marital-status-VtH-sub-0">*</span>
+            <span class="marital-status-VtH-sub-1">
+              
+Income Certificate</span>
+            <span class="marital-status-VtH-sub-2"> </span>
+          </p>
+          {{form.IncomeCertificateUpload}}
+          <!-- <input class="rectangle-61-x9b" type="text"/> -->
+        </div>
+      </div>
+
     </div>
     
-    <div class="button-phb">
+    <button type="submit" class="button-phb">
 
       
 
@@ -121,7 +341,7 @@
       
       <p class="next-i2H">Next</p>
     </div>
-  </div>
+  </button>
 
 </form>
 </div>
