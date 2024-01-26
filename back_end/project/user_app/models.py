@@ -79,7 +79,7 @@ class ScolarShipFormModel(models.Model):
 
     PinCode = models.IntegerField()
 
-    MobileNUmber = models.IntegerField()
+    MobileNUmber = models.CharField(max_length=20)
 
     EmailAddress = models.EmailField()
 
@@ -104,3 +104,6 @@ class ScolarShipFormModel(models.Model):
     IncomeCertificateUpload = models.FileField(upload_to='scholarship')
 
     status = models.CharField(max_length=10, choices=form_status, default='1')
+
+
+    create_on = models.DateTimeField(auto_now=True)

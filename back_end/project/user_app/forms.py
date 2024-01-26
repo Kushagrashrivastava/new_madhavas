@@ -1,8 +1,11 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from main_app import models
-from user_app.models import UploadForm, document_choice, ScolarShipFormModel
+from user_app.models import UploadForm, document_choice, ScolarShipFormModel, gender_choices
+from utills.institute_data import CollegeData
 
+
+print(CollegeData)
 
 """
 User authentication form
@@ -42,42 +45,42 @@ class UploadFormDoc(forms.ModelForm):
 class ScolarShipForm(forms.ModelForm):
     highersecondarypercentage = forms.IntegerField(
         widget=forms.NumberInput(attrs={
-            'class': 'rectangle-55-gPw'
+            'class': 'rectangle-61-x9b'
         })
     )
     transfercertificate = forms.IntegerField(
         widget=forms.NumberInput(attrs={
-            'class': 'group-25-hdo'
+            'class': 'rectangle-61-x9b'
         })
     )
     gapcertificate = forms.IntegerField(
         widget=forms.NumberInput(attrs={
-            'class': 'group-24-emK'
+            'class': 'rectangle-61-x9b'
         })
     )
     secondaryclasspercentage = forms.IntegerField(
         widget=forms.NumberInput(attrs={
-            'class': 'rectangle-55-iAq'
+            'class': 'rectangle-61-x9b'
         })
     )
     lastyearmarksheet = forms.IntegerField(
         widget=forms.NumberInput(attrs={
-            'class': 'group-25-jxR'
+            'class': 'rectangle-61-x9b'
         })
     )
     accountholdername = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-69-ccm'
+            'class': 'rectangle-61-x9b'
         })
     )
     accountnumber = forms.IntegerField(
         widget=forms.NumberInput(attrs={
-            'class': 'rectangle-70-qdw'
+            'class': 'rectangle-61-x9b'
         })
     )
     isfcnumber = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-71-3tR'
+            'class': 'rectangle-61-x9b'
         })
     )
     
@@ -97,10 +100,11 @@ class ScolarShipForm(forms.ModelForm):
         })
     )
     Gender = forms.ChoiceField(
-        widget=forms.Select(attrs={
-            'class': 'rectangle-56-1iu '
-        })
-    )
+    choices=gender_choices,
+    widget=forms.Select(attrs={
+        'class': 'rectangle-56-1iu'
+    })
+)
     Address = forms.CharField(
         widget=forms.TextInput(attrs={
             'class': 'rectangle-57-suX'
@@ -111,8 +115,8 @@ class ScolarShipForm(forms.ModelForm):
             'class': 'rectangle-58-Wb7'
         })
     )
-    MobileNUmber = forms.IntegerField(
-        widget=forms.NumberInput(attrs={
+    MobileNUmber = forms.CharField(
+        widget=forms.TextInput(attrs={
             'class': 'rectangle-60-umf '
         })
     )
@@ -129,53 +133,53 @@ class ScolarShipForm(forms.ModelForm):
       
     CasteCertificate = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-55-Y7f'
+            'class': 'rectangle-61-x9b'
         })
     )
     CasteCertificateUpload = forms.FileField(
         widget=forms.FileInput(attrs={
-            'class': 'rectangle-55-Fy7'
+            'class': 'rectangle-61-x9b'
         })
     )
     DomicileCertificate = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-56-qrm'
+            'class': 'rectangle-61-x9b'
         })
     )
     DomicileCertificateUpload = forms.FileField(
         widget=forms.FileInput(attrs={
-            'class': 'rectangle-56-JXP'
+            'class': 'rectangle-61-x9b'
         })
     ) 
     VOterID = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-57-aFw'
+            'class': 'rectangle-61-x9b'
         })
     )
     PanCard = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-58-XKb'
+            'class': 'rectangle-61-x9b'
         })
     )
     SSmID = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-60-3qf'
+            'class': 'rectangle-61-x9b'
         })
     )
     IncomeCertificate = forms.CharField(
         widget=forms.TextInput(attrs={
-            'class': 'rectangle-59-PwT'
+            'class': 'rectangle-61-x9b'
         })
     )
     IncomeCertificateUpload = forms.FileField(
         widget=forms.FileInput(attrs={
-            'class': 'rectangle-61-Nyj'
+            'class': 'rectangle-61-x9b'
         })
     )    
 
     class Meta:
         model = ScolarShipFormModel
-        exclude = ('status', )
+        exclude = ('status', 'user')
         
 
 
@@ -248,8 +252,8 @@ class SignupForm(UserCreationForm):
         widget=forms.Select(attrs={"class": "rectangle-45-5bK"})
     )
     
-    institute = forms.ModelChoiceField(
-            queryset=models.College.objects.all().order_by('name'),
+    institute = forms.CharField(
+            # queryset=models.College.objects.all().order_by('name'),
             widget=forms.Select(attrs={"class":"rectangle-45-5Fs"})
         )
     
