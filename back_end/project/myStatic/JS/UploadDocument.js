@@ -1,24 +1,48 @@
-var fchmodal = document.getElementById("fchmyModal");
-        
-// Get the button that opens the modal
-var fchbtn = document.getElementById("fchmyBtn");
+var fchbtns = document.querySelectorAll(".fchmyBtn");
+var fchbtns1 = document.querySelectorAll(".fchmyBtn1");
+var fchbtns2 = document.querySelectorAll(".fchmyBtn3");
+var fchmodals = document.querySelectorAll(".fchmodal");
+var fchspans = document.querySelectorAll(".fchclose");
 
-// Get the <span> element that closes the modal
-var fchspan = document.getElementsByClassName("fchclose")[0];
-
-// When the user clicks the button, open the modal 
-fchbtn.onclick = function() {
-  fchmodal.style.display = "block";
+// Function to open the modal
+function openModal(index) {
+  fchmodals[index].style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-fchspan.onclick = function() {
-  fchmodal.style.display = "none";
+// Function to close the modal
+function closeModal(index) {
+  fchmodals[index].style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == fchmodal) {
-    fchmodal.style.display = "none";
-  }
-}
+// Event listeners for opening the modals
+fchbtns.forEach(function (btn, index) {
+  btn.addEventListener("click", function () {
+    openModal(index);
+  });
+});
+fchbtns1.forEach(function (btn, index) {
+  btn.addEventListener("click", function () {
+    openModal(index);
+  });
+});
+fchbtns2.forEach(function (btn, index) {
+  btn.addEventListener("click", function () {
+    openModal(index);
+  });
+});
+
+// Event listeners for closing the modals using the spans
+fchspans.forEach(function (span, index) {
+  span.addEventListener("click", function () {
+    closeModal(index);
+  });
+});
+
+// Event listeners for closing the modals when clicking outside the modals
+window.addEventListener("click", function (event) {
+  fchmodals.forEach(function (modal, index) {
+    if (event.target == modal) {
+      closeModal(index);
+    }
+  });
+});

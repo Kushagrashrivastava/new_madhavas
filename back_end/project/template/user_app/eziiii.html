@@ -86,60 +86,56 @@
         </div>
 
         <!-- 10th marklsheet -->
-        <div class="group-12-6uT">
-          <div class="x-marksheet-nnH">
-            <div class="auto-group-jtuy-heM">
-              <div class="auto-group-ua3o-EuB">
-                <img class="rectangle-86-MD7" src="{% static '/assets/rectangle-86.png' %}"/>
-                <p class="class-xii-marksheet-Gay">Class X Marksheet</p>
-                <p class="cgpa-xCu">{{10.marks}}</p>
-                <p class="board-of-education-Qqb">{{10.institute}}</p>
-              </div>
-              <div class="auto-group-nwcm-7ED">
-                <div  id="myBtn" class="upload-original-qR7">Upload Original</div>
-                <div class="upload-original-JpV">Download Fetched</div>
-              </div>
-            </div>
-            <p class="xii-marksheet-Q6q">X Marksheet</p>
-          </div>
+<div class="group-12-6uT">
+  <div class="x-marksheet-nnH">
+    <div class="auto-group-jtuy-heM">
+      <div class="auto-group-ua3o-EuB">
+        <img class="rectangle-86-MD7" src="{% static '/assets/rectangle-86.png' %}" />
+        <p class="class-xii-marksheet-Gay">Class X Marksheet</p>
+        <p class="cgpa-xCu">{{10.marks}}</p>
+        <p class="board-of-education-Qqb">{{10.institute}}</p>
+      </div>
+      <div class="auto-group-nwcm-7ED">
+        <div class="upload-original-qR7 fchmyBtn">Upload Original</div>
+        <div class="upload-original-JpV">Download Fetched</div>
+      </div>
+    </div>
+    <p class="xii-marksheet-Q6q">X Marksheet</p>
+  </div>
 
+  <!-- 12th marksheet -->
+  <div class="xii-marksheet-7X3">
+    <div class="auto-group-cald-ErZ">
+      <div class="auto-group-gvtb-Nhs">
+        <img class="rectangle-86-HZw" src="{% static '/assets/rectangle-86-9Tb.png' %}" />
+        <p class="class-xii-marksheet-Rw3">Class XII Marksheet</p>
+        <p class="cgpa-Whb">{{12.marks}}</p>
+        <p class="board-of-education-ckd">{{12.institute}}</p>
+      </div>
+      <div class="auto-group-ueah-X6u">
+        <div class="upload-original-rQ5 fchmyBtn1">Upload Original</div>
+        <div class="upload-original-PYR">Download Fetched</div>
+      </div>
+    </div>
+    <p class="xii-marksheet-HNu">XII Marksheet</p>
+  </div>
 
-          <!-- 12th marksheet -->
-          <div class="xii-marksheet-7X3">
-            <div class="auto-group-cald-ErZ">
-              <div class="auto-group-gvtb-Nhs">
-                <img class="rectangle-86-HZw" src="{% static '/assets/rectangle-86-9Tb.png' %}"/>
-                <p class="class-xii-marksheet-Rw3">Class XII Marksheet</p>
-                <p class="cgpa-Whb">{{12.marks}}</p>
-                <p class="board-of-education-ckd">{{12.institute}}</p>
-              </div>
-              <div class="auto-group-ueah-X6u">
-                <div  id="myBtn" class="upload-original-rQ5">Upload Original</div>
-                <div class="upload-original-PYR">Download Fetched</div>
-              </div>
-            </div>
-            <p class="xii-marksheet-HNu">XII Marksheet</p>
-          </div>
+  {% for item in edu %}
+  <div class="migration-certificate-Pwj">
+    <div class="auto-group-ewd7-jVo">
+      <div class="auto-group-s5ad-sc1">
+        <img class="rectangle-86-DQy" src="{% static '/assets/rectangle-86-hBb.png' %}" />
+        <p class="migration-certificate-Mn5">{{item.document_type}}</p>
+      </div>
+      <div class="auto-group-a2km-skR">
+        <a class="upload-original-44D fchmyBtn2" href="{{item.document.url}}" download="{{item.document.name}}">Download uploaded</a>
+      </div>
+    </div>
+    <p class="migration-certificate-w81">{{item.document_type}}</p>
+  </div>
+  {% endfor %}
+</div>
 
-          {% for item in edu %}
-          <div class="migration-certificate-Pwj">
-            <div class="auto-group-ewd7-jVo">
-              <div class="auto-group-s5ad-sc1">
-                <img class="rectangle-86-DQy" src="{% static '/assets/rectangle-86-hBb.png' %}"/>
-                <p class="migration-certificate-Mn5">{{item.document_type}}</p>
-              </div>
-              <div class="auto-group-a2km-skR">
-                <a class="upload-original-44D" href="{{item.document.url}}" download="{{item.document.name}}">Download uploaded</a>
-              </div>
-            </div>
-            <p class="migration-certificate-w81">{{item.document_type}}</p>
-          </div>
-
-          {% endfor %}
-
-          
-          
-        </div>
       </div>
     </div>
     <div class="scholarship-document--ohw">
@@ -225,7 +221,7 @@
           {% endfor %}
 
           <div class="aadhar-fGq">
-            <img id="fchmyBtn" class="rectangle-5-otq" src="{% static '/assets/rectangle-5.png'%}"/>
+            <img  class="rectangle-5-otq fchmyBtn3" src="{% static '/assets/rectangle-5.png'%}"/>
             <p class="domicile-certificate-Z7K">Upload Document</p>
             
           </div>          
@@ -241,42 +237,37 @@
 
     <form action="{% url 'uploadDoc' %}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
-    <div id="fchmyModal" class=" fchmodal">
-      <div class=" fchmodal-content">
-        <span class="fchclose">&times;</span>
-    <div class="fetch-document-ANH">
-      <div class="card-login-sign-up-KW5">
-        <div class="auto-group-ptc9-s1o">Upload Your Document</div>
-        <div class="sign-up-7gq">
-          <div class="auto-group-nudf-2J1">
-            <div class="mobile-number-yj3">
-              <p class="document-type-iRj">Document Type</p>
-
-              {{form.document_type}}
-              <!-- <select class="rectangle-46-CLu"> -->
-              <!-- </select> -->
-            </div>
-            <div class="name-field-jLq">
-              <p class="document-no-fEV">Document No.</p>
-
-              {{form.document_number}}
-
-              <!-- <input class="rectangle-45-acM" type="text"/> -->
+      <div id="fchmyModal fchmyModal2" class="fchmodal">
+        <div class="fchmodal-content">
+          <span class="fchclose">&times;</span>
+          <div class="fetch-document-ANH">
+            <div class="card-login-sign-up-KW5">
+              <div class="auto-group-ptc9-s1o">Upload Your Document</div>
+              <div class="sign-up-7gq">
+                <div class="auto-group-nudf-2J1">
+                  <div class="mobile-number-yj3">
+                    <p class="document-type-iRj">Document Type</p>
+                    {{form.document_type}}
+                  </div>
+                  <div class="name-field-jLq">
+                    <p class="document-no-fEV">Document No.</p>
+                    {{form.document_number}}
+                  </div>
+                </div>
+    
+                <div class="state-ic5">
+                  <p class="district-sE5">Upload</p>
+                  {{form.document}}
+                </div>
+    
+                <button class="auto-group-jz9p-MQ9" type="submit">Submit</button>
+              </div>
             </div>
           </div>
-          
-          <div class="state-ic5">
-            <p class="district-sE5">Upload</p>
-
-            {{form.document}}
-            
-          </div>
-          <button class="auto-group-jz9p-MQ9" type="submit">Submit</button>
         </div>
       </div>
-    </div>
-      </div>
-    </div>
+    </form>
+    
 
   </form>
   </div>
@@ -324,7 +315,7 @@
 
     </div>
   </div>
-  <div class="header-7LR">
+ <div class="header-7LR">
     <div class="rectangle-2-4Ff">
     </div>
     <img class="bcd3b4b5d471dae27a60bd4b5f07-1-9nu" src="{% static '/assets/bcd3b4b5d471dae27a60bd4b5f07-1-kMs.png' %}"/>
