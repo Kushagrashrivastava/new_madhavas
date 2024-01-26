@@ -2,10 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from main_app import models
 from user_app.models import UploadForm, document_choice, ScolarShipFormModel, gender_choices
-from utills.institute_data import CollegeData
 
-
-print(CollegeData)
 
 """
 User authentication form
