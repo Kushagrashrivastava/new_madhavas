@@ -12,56 +12,55 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=jsMath-cmbx10%3A700"/>
   <link rel="stylesheet" href="{% static '/styles/frame-21.css' %}"/>
   <link rel="stylesheet" href="{% static '/styles/institutelvlverification.css' %}"/>
+  
 </head>
 <body>
   <div class="menu-FJD">
     <div class="frame-2-ZZo">
       <div class="auto-group-in4m-Wzq">
-        <!-- <div class="group-7-Tv5">
-          <a href="eziiii-api.html">
+        <div class="group-7-Tv5">
+          <a href="{% url 'api_dashboard' %}">
           <div class="rectangle-21-2CV">
           </div>
           <div class="get-api-X9F">Get API</div>
           <img class="bookmark-CWH" src="{% static '/assets/bookmark-pRj.png' %}"/>
           </a>
-        </div> -->
-        <!-- <div class="group-7-Tv5">
-          <a href="hackathons.html">
+        </div>
+        <div class="group-7-Tv5">
+          <a href="{% url 'instithackathonForm' %}">
           <div class="rectangle-21-2CV">
           </div>
           <p class="get-api-X9F">Hackathons</p>
           <img class="bookmark-CWH" src="{% static '/assets/book-reading-XBT.png' %}"/>
           </a>
-        </div> -->
-        <!-- <div class="group-7-Tv5">
-          <a href="scholarships.html">
+        </div>
+        <div class="group-7-Tv5">
+          <a href="{% url 'institScholarForm' %}">
           <div class="rectangle-21-2CV">
           </div>
           <p class="get-api-X9F">Scholarships</p>
           <img class="bookmark-CWH" src="{% static '/assets/ebook-GRT.png' %}"/>
           </a>
-        </div> -->
+        </div>
       
-      <!-- <div class="group-7-Tv5">
-        <a href="internships-jobs.html">
+      <div class="group-7-Tv5">
+        <a href="{% url 'institinternForm' %}">
         <div class="rectangle-21-2CV"> 
         </div>
         <p class="get-api-X9F">Intern/Jobs</p>
         <img class="bookmark-CWH" src="{% static '/assets/internship-bg-QCM.png' %}"/>
         </a>
-      </div> -->
-
+      </div>
       <div class="group-7-Tv5">
-        <a href="{% url 'instiverify' %}">
+        <a href="institutelvlverification.html">
         <div class="rectangle-21-2CV"> 
         </div>
         <p class="get-api-X9F">Student Verification</p>
         <img class="bookmark-CWH" src="{% static '/assets/file-document-check-17j.png' %}"/>
         </a>
       </div>
-
       <div class="group-7-Tv5">
-        <a href="{% url 'instiverify' %}">
+        <a href="faq.html">
         <div class="rectangle-21-2CV">
         </div>
         <p class="get-api-X9F">FAQ’s</p>
@@ -74,39 +73,43 @@
   <div class="header-XXs">
     <div class="rectangle-2-fty">
     </div>
-    <img class="bcd3b4b5d471dae27a60bd4b5f07-1-x7P" src="{% static '/assets/bcd3b4b5d471dae27a60bd4b5f07-1-Skm.png' %}"/>
-    <img id="myBtn" class="account-circle-5ho" src="{% static '/assets/account-circle-PED.png' %}"/>
+    <img class="bcd3b4b5d471dae27a60bd4b5f07-1-x7P" src="{% static '/assets/bcd3b4b5d471dae27a60bd4b5f07-1-Skm.png'%}"/>
+    <img id="myBtn" class="account-circle-5ho" src="{% static '/assets/account-circle-PED.png'%}"/>
     <div class="madhvas">
     </div>
     <p class="ezapi">EzAPI</p>
-    <img class="bell" src="{% static '/assets/bell-8j7.png' %}"/>
+    <img class="bell" src="{% static '/assets/bell-8j7.png'%}"/>
+    <!-- PopUpBox -->
+    <div id="myModal" class=" modal">
+      <div class=" modal-content">
+        <span class="close">&times;</span>
+        <div class="frame-21-6ZB">
+         <div class="auto-group-gydb-QJy">
+        <div class="ellipse-46-To3">
+        </div>
+        <div class="auto-group-msgm-ymP">
+          <p class="raman-yadav-76u">{{aadhar.holder_name}}</p>
+          <p class="ramanya-CPF">{{aadhar.aadhar_no}}</p>
+        </div>
+        <a class="auto-group-xbzf-6zR"  href="{% url 'profile' %}">Manage Your Account
+          .
+        </a>
+      </div>
+      <a class="yourfrofile-kp5", href="{% url 'logout' %}">
+        <img class="account-fg9" src="{% static '/assets/account.png' %}"/>
+        <p class="your-profile-mjB">Logout</p>
+      </a>
+      <div class="activities-SqK">
+        <img class="bell-badge-PEm" src="{% static '/assets/bell-badge.png' %}"/>
+        <p class="activities-w1P">Activities</p>
+      </div>
+      </div>
+    </div>
+   </div>
   </div>
 
   <!-- PopUpBox -->
-  <div id="myModal" class=" modal">
-    <div class=" modal-content">
-      <span class="close">&times;</span>
-      <div class="frame-21-6ZB">
-       <div class="auto-group-gydb-QJy">
-      <div class="ellipse-46-To3">
-      </div>
-      <div class="auto-group-msgm-ymP">
-        <p class="raman-yadav-76u">Raman Yadav</p>
-        <p class="ramanya-CPF">@ramanya</p>
-      </div>
-      <div class="auto-group-xbzf-6zR">Manage Your Account</div>
-    </div>
-    <div class="yourfrofile-kp5">
-      <img class="account-fg9" src="{% static '/assets/account.png' %}"/>
-      <p class="your-profile-mjB">Your Profile</p>
-    </div>
-    <div class="activities-SqK">
-      <img class="bell-badge-PEm" src="{% static '/assets/bell-badge.png' %}"/>
-      <p class="activities-w1P">Activities</p>
-    </div>
-    </div>
-  </div>
- </div>
+  
 
 
   <div>
@@ -127,6 +130,5 @@
        
     </table>
   </div>
-<script src="./JS/UploadDocument.js"></script>
 <script src="./JS/AccountPopUP.js"></script>
 </body>
