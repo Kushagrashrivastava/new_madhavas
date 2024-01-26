@@ -8,6 +8,7 @@ urlpatterns = [
     path("api-logout", views.logout_api_view, name='api_logout'),
     path("", views.api_dashboard_api, name='api_dashboard'),
     path("hackathonForm", views.form_Hackathon, name='instithackathonForm'), 
+    path("institutelvl", views.institute_lvl_verification, name='institutelvlv'), 
 
     path("api/getClg/<str:type>", views.college_data_api, name='college_data'),
     path("api/getScl/<str:type>", views.school_data_api, name='school_data'),

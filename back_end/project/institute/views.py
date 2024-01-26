@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, JsonResponse, Http404
 from utills import institute_data
 from django.views.decorators.csrf import csrf_exempt
+from user_app.models import ScolarShipFormModel
 
 # Create your views here.
 csrf_exempt
@@ -42,6 +43,25 @@ def school_data_api(request, type: str):
     else:
         return Http404
     return JsonResponse({'res': 'success', 'data': data})
+
+# Institute_level
+def institute_lvl_verification(request):
+
+    if not(request.user.is_authenticated):
+        return redirect('api_login')  # Redirect to the login page if user is not logged in
+    
+
+    my_user = CustomUser.objects.filter(username=request.user).first()
+
+    data = ScolarShipFormModel.objects.filter(institute=my_user.institute).all()
+
+
+    if not(my_user.is_institute):
+        return redirect('login')
+
+
+
+    return render(request, 'institute/institutelvlverification.html', {'data': data})
 
 
 # login view for apis
