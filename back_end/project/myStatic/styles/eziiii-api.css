@@ -33,6 +33,7 @@ body {
 }
 
 .auto-group-ddv7-F8Z {
+  margin-left: 5rem;
   box-sizing: border-box;
   padding-bottom: 2.5rem;
   width: 100%;
@@ -103,6 +104,7 @@ body {
   flex-shrink: 0;
 }
 .code-ae1 {
+  margin-left: 5rem;
   box-sizing: border-box;
   padding: 2rem;
   width: 100%;
@@ -184,7 +186,7 @@ body {
   box-sizing: border-box;
   padding: 2rem;
   padding-top: 4rem;
-  width: 24rem;
+  width: 27rem;
   height: 100%;
   position: absolute;
   top: 6rem;
@@ -202,10 +204,15 @@ body {
   flex-shrink: 0;
 }
 .group-7-Tv5 {
-  width: 29.6rem;
-  height: 5.8rem;
+  width: 23rem;
+  height: 4rem;
   position: relative;
   flex-shrink: 0;
+}
+.group-7-Tv5:hover{
+  background-color: rgba(23, 173, 50, 0.4600000083);
+  border-radius: 2rem;
+  padding: 0.5rem;
 }
 /* .group-7-Tv5 .rectangle-21-2CV {
   width: 20rem;
