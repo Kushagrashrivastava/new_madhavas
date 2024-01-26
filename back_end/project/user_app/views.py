@@ -587,7 +587,6 @@ def signup(request):
 
                 try:
 
-                   
                     user = CustomUser.objects.create_user(
                         username=aadhar,
                         aadhar_number=aadhar,
@@ -596,7 +595,7 @@ def signup(request):
                         is_verified=True,
                         gender=my_form['gender'].value(),
                         Name=my_form['Name'].value(),
-                        institute=College.objects.get(id=my_form['institute'].value()),
+                        institute=my_form['institute'].value(),
                         dob=my_form['dob'].value(),
                         email=data.email,
                         phone_number = my_form['phone_number'].value()

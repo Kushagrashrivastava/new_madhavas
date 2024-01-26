@@ -96,7 +96,7 @@ class CustomUser(AbstractUser):
     dob = models.DateField()
 
     #not null
-    institute = models.ForeignKey(College, max_length=100, null=True, blank=True, on_delete=models.CASCADE)
+    institute = models.CharField(max_length=100, null=True, blank=True)
     caste = models.CharField(max_length=20, null=True, blank=True, choices=cast_choice)
 
     is_institute = models.BooleanField(default=False)

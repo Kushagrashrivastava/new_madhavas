@@ -252,8 +252,8 @@ class SignupForm(UserCreationForm):
         widget=forms.Select(attrs={"class": "rectangle-45-5bK"})
     )
     
-    institute = forms.ModelChoiceField(
-            queryset=models.College.objects.all().order_by('name'),
+    institute = forms.CharField(
+            # queryset=models.College.objects.all().order_by('name'),
             widget=forms.Select(attrs={"class":"rectangle-45-5Fs"})
         )
     
